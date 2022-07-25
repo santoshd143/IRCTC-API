@@ -25,10 +25,10 @@ public class TicketService {
 			response.setFrom(request.getFrom());
 			response.setTo(request.getTo());
 			response.setJdate(request.getJdate());
-			String pnr = UUID.randomUUID().toString();
-			response.setPnr(pnr);
+//			String pnr = UUID.randomUUID().toString();
+			response.setPnr("PNR48044");
 			dao.saveTicket(response);
-			return pnr ;
+			return "PNR48044" ;
 	}
 	public TicketResponse getTicketByPnr(String pnr) {
 			return dao.getTicketByPnr(pnr);
